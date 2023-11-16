@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -30,29 +33,50 @@
         </div>
 
             <div class="position pt-12 flex justify-center">
-                <div class="meniu w-5/6 h-10 bg-white rounded-3xl flex justify-center gap-10 items-center pop">
-                        <div class="burger cursor-pointer">
-                            <i class="fa-solid fa-xmarks-lines"></i>
-                            
-                        </div>
-                    <a href="#">Shop</a>
-                    <a href="#">Events & Catering</a>
-                    <a href="#">Our Flavors</a>
-                    <a href="#">Specials</a>
+                <div class="meniu w-11/12 h-10 bg-white rounded-3xl flex justify-around gap-10 items-center pop">
+                    <i class="fa-solid fa-x xl:hidden"></i>
+                    <a class="hidden xl:block" href="#">Shop</a>
+                    <a class="hidden xl:block" href="#">Events & Catering</a>
+                    <a class="hidden xl:block" href="#">Our Flavors</a>
+                    <a class="hidden xl:block" href="#">Specials</a>
                         <div class="logo w-36 mt-9">
                             <a href="index.html"><img src="/img/logo_ice.png" alt="logo"></a>
                         </div>
-                    <a href="#">Ice Cream Treats</a>
-                    <a href="#">Contact Us</a>
-                        <div class="link flex gap-7">
+                    <a class="hidden xl:block" href="#">Ice Cream Treats</a>
+                    <a class="hidden xl:block" href="#">Contact Us</a>
+                        <div class="link hidden xl:flex gap-5">
                             <a href="#"><i class="fa-regular fa-comments"></i></a>
                             <a href="#"><i class="fa-regular fa-thumbs-up"></i></a>
                             <a href="#"><i class="fa-regular fa-user"></i></a>
+                        </div>
+
+                        <div class="burger-meniu xl:hidden">
+                            <i class="fa-solid fa-xmarks-lines"></i>
                         </div>
                 </div>
             </div>
 
     </div>
+
+    <!-- hero section -->
+
+<div class="hero-all mt-28 flex flex-col items-center">
+
+            <img src="img/image 112.png" alt="ice cream" class="w-1/3">
+
+        <div class="text-mid ">
+                <h1 class="lily main-pink text-6xl">Frozen Joy</h1>
+                <p class="my-3">Savoring creamy delights under the summer sun, each spoonful brings pure happiness, a symphony of flavors dancing on the palate.</p>
+                <div class="buttons">
+                    <button class="pink">Order now</button>
+                    <button class="beige">Read more</button>
+                </div>
+        </div>
+
+            <img src="img/image 113.png" alt="ice cream" class="w-1/3">
+</div>
+
+
     
 
 

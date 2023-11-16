@@ -2,8 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-.pop{
-    font-family: 'Poppins', sans-serif;
+
+
+.lily{
+    font-family: "Lily Script One", sans-serif;
+}
+
+.pink{
+    background-color: rgba(255, 102, 110, 1);
+}
+
+.beige{
+    background-color: rgba(255, 222, 205, 1)
+}
+
+.main-pink{
+    color: rgba(240, 154, 190, 1);
 }
