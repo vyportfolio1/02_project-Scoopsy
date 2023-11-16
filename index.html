@@ -14,13 +14,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- nav -->
     
-    <div class="nav">
-        <div class="back fixed -z-10 w-full">
+    <div class="nav relative">
+        <div class="back absolute -z-10 w-full">
             <svg viewBox="0 0 1920 659" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1755 225.909C1807 260.535 1916.41 82.3374 1920 65.8099V0H0V659C2.86888 641.27 15.0616 607.073 40.8816 612.122C73.1565 618.432 100.411 584.175 198.67 494.926C296.929 405.677 285.454 340.769 308.405 278.565C326.766 228.802 353.351 245.81 364.348 260.535C409.533 298.098 507.362 350.685 537.198 260.535C574.494 147.847 572.388 221.622 668.5 174.407C765 127.001 802.577 110.885 853.5 199.233C904.423 287.58 1033.52 178.498 1179.11 199.233C1324.71 219.967 1317.64 229.399 1441 174.407C1564.36 119.415 1617.72 134.497 1755 225.909Z" fill="url(#paint0_linear_177_29)"/>
                 <defs>
@@ -36,9 +39,9 @@
                 <div class="meniu w-11/12 h-10 bg-white rounded-3xl flex justify-around gap-10 items-center pop">
                     <i class="fa-solid fa-x xl:hidden"></i>
                     <a class="hidden xl:block" href="#">Shop</a>
-                    <a class="hidden xl:block" href="#">Events & Catering</a>
-                    <a class="hidden xl:block" href="#">Our Flavors</a>
                     <a class="hidden xl:block" href="#">Specials</a>
+                    <a class="hidden xl:block" href="#">Our Flavors</a>
+                    <a class="hidden xl:block" href="#">Events & Catering</a>
                         <div class="logo w-36 mt-9">
                             <a href="index.html"><img src="/img/logo_ice.png" alt="logo"></a>
                         </div>
@@ -60,20 +63,88 @@
 
     <!-- hero section -->
 
-<div class="hero-all mt-28 flex flex-col items-center">
+<div class="hero-all mt-28 flex flex-col items-center mx-8">
 
-            <img src="img/image 112.png" alt="ice cream" class="w-1/3">
+            <img src="img/image 112.png" alt="ice cream" class="w-1/3 -rotate-12 hidden">
 
-        <div class="text-mid ">
+        <div class="text-mid text-center">
                 <h1 class="lily main-pink text-6xl">Frozen Joy</h1>
-                <p class="my-3">Savoring creamy delights under the summer sun, each spoonful brings pure happiness, a symphony of flavors dancing on the palate.</p>
-                <div class="buttons">
-                    <button class="pink">Order now</button>
-                    <button class="beige">Read more</button>
+                <p class="my-3 w-80">Savoring creamy delights under the summer sun, each spoonful brings pure happiness, a symphony of flavors dancing on the palate.</p>
+                <div class="buttons ">
+                    <button class="pink px-3 py-1 rounded-2xl text-white">Shop now</button>
+                    <button class="beige px-3 py-1 rounded-2xl text-neutral-800">Read more</button>
                 </div>
         </div>
 
-            <img src="img/image 113.png" alt="ice cream" class="w-1/3">
+            <img src="img/image 113.png" alt="ice cream" class="rotate-6 w-8/12 -mt-36 relative -z-10">
+</div>
+
+<!-- Specials section -->
+
+<div class="Specials">
+        <div class="cat flex justify-between mx-8">
+            <h1 class="text-neutral-800 jul text-4xl ">Specials</h1>
+            <div class="arrows flex gap-2">
+                <div class="left cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="left cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- caurel -->
+        <div class="all-carusel">
+            <div class="ice">
+                <img src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+                <p>Tropical Paradise</p>
+                <div class="pal flex">
+                    <p>10&#x20AC;</p>
+                    <i class="fa-regular fa-thumbs-up"></i>
+                </div>
+            </div>
+
+            <div class="ice">
+                <img src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+                <p>Tropical Paradise</p>
+                <div class="pal flex">
+                    <p>10&#x20AC;</p>
+                    <i class="fa-regular fa-thumbs-up"></i>
+                </div>
+            </div>
+
+            <div class="ice">
+                <img src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+                <p>Tropical Paradise</p>
+                <div class="pal flex">
+                    <p>10&#x20AC;</p>
+                    <i class="fa-regular fa-thumbs-up"></i>
+                </div>
+            </div>
+            
+            <div class="ice">
+                <img src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+                <p>Tropical Paradise</p>
+                <div class="pal flex">
+                    <p>10&#x20AC;</p>
+                    <i class="fa-regular fa-thumbs-up"></i>
+                </div>
+            </div>
+
+            <div class="ice">
+                <img src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+                <p>Tropical Paradise</p>
+                <div class="pal flex">
+                    <p>10&#x20AC;</p>
+                    <i class="fa-regular fa-thumbs-up"></i>
+                </div>
+            </div>
+        </div>
+
+        
+
+
 </div>
 
 
