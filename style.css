@@ -27,4 +27,8 @@
     color: rgba(240, 154, 190, 1);
 }
 
+.all-carusel {
+    transition: transform 0.5s ease-in-out;
+  }
+
  
