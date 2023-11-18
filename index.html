@@ -6,9 +6,7 @@
     <title>Scoopsy</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-    <script src="https://kit.fontawesome.com/095c0db03e.js" crossorigin="anonymous"></script>
+     <script src="https://kit.fontawesome.com/095c0db03e.js" crossorigin="anonymous"></script>
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,14 +38,14 @@
             <div class="position pt-12 flex justify-center">
                 <div class="meniu w-11/12 h-10 bg-white rounded-3xl flex justify-around gap-10 items-center pop">
                     <i class="fa-solid fa-x xl:hidden"></i>
-                    <a class="hidden xl:block" href="#">Shop</a>
                     <a class="hidden xl:block" href="#">Specials</a>
-                    <a class="hidden xl:block" href="#">Our Flavors</a>
+                    <a class="hidden xl:block" href="#">Reviews</a>
                     <a class="hidden xl:block" href="#">Events & Catering</a>
+                    <a class="hidden xl:block" href="#">Our Flavors</a>
                         <div class="logo w-36 mt-9">
                             <a href="index.html"><img src="/img/logo_ice.png" alt="logo"></a>
                         </div>
-                    <a class="hidden xl:block" href="#">Ice Cream Treats</a>
+                    <a class="hidden xl:block" href="#">Shop</a>
                     <a class="hidden xl:block" href="#">Contact Us</a>
                         <div class="link hidden xl:flex gap-5">
                             <a href="#"><i class="fa-regular fa-comments"></i></a>
@@ -65,12 +63,12 @@
 
     <!-- hero section -->
 
-<div class="hero-all mt-28 flex flex-col items-center mx-8">
+<div class="hero-all mt-28 flex flex-col items-center mx-8 md:flex-row md:justify-center">
 
-            <img src="img/image 112.png" alt="ice cream" class="w-1/3 -rotate-12 hidden">
+            <img src="img/image 112.png" alt="ice cream" class="-rotate-12 hidden md:block md:w-[200px] md:-mt-8 ">
 
-        <div class="text-mid text-center">
-                <h1 class="lily main-pink text-6xl">Frozen Joy</h1>
+        <div class="text-mid text-center flex flex-col justify-center items-center">
+                <h1 class="lily main-pink text-6xl md:text-8xl md:mb-6">Frozen Joy</h1>
                 <p class="my-3 w-80">Savoring creamy delights under the summer sun, each spoonful brings pure happiness, a symphony of flavors dancing on the palate.</p>
                 <div class="buttons ">
                     <button class="pink px-3 py-1 rounded-2xl text-white">Shop now</button>
@@ -78,13 +76,13 @@
                 </div>
         </div>
 
-            <img src="img/image 113.png" alt="ice cream" class="rotate-6 w-8/12 -mt-36 relative -z-10">
+            <img src="img/image 113.png" alt="ice cream" class="rotate-6 w-[300px] -mt-36 relative -z-10 md:w-[200px]">
 </div>
 
 <!-- Specials section -->
 
 <div class="Specials ">
-    <div class="cat flex justify-between mx-8">
+    <div class="cat flex justify-between mx-8 md:mt-12">
         <h1 class="text-neutral-800 jul text-4xl ">Specials</h1>
         <div class="arrows flex gap-2">
             <div class="leftb cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full ">
@@ -98,9 +96,11 @@
 
     <!-- caurel -->
     <div class="flex justify-center">
-    <div class="all-carusel w-11/12 overflow-hidden flex justify-center" id="imageSlider">
-        <div class="ice bg-white ">
-            <img class="max-w-[200px]" src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+    <div class="all-carusel w-11/12 overflow-hidden flex " id="imageSlider">
+        <div class="ice bg-white">
+            <div class="img1 w-64">
+                <img src="/img/carus01.png" alt="ice cream">
+            </div>
             <p class="text-center">Tropical Paradise</p>
             <div class="pal flex gap-16 justify-center">
                 <p class="text-xl ">10&#x20AC;</p>
@@ -109,7 +109,9 @@
         </div>
 
         <div class="ice bg-white">
-            <img class="max-w-[200px]" src="/img/carus02.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+            <div class="img1 w-64">
+                <img src="/img/carus02.png" alt="ice cream">
+            </div>
             <p class="text-center">Midnight Mocha Madness</p>
             <div class="pal flex gap-16 justify-center">
                 <p class="text-xl ">12&#x20AC;</p>
@@ -118,7 +120,9 @@
         </div>
 
         <div class="ice bg-white">
-            <img class="max-w-[200px]" src="/img/carus03.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+            <div class="img1 w-64">
+                <img src="/img/carus03.png" alt="ice cream">
+            </div>
             <p class="text-center">Citrus Burst</p>
             <div class="pal flex gap-16 justify-center">
                 <p class="text-xl ">10&#x20AC;</p>
@@ -127,7 +131,9 @@
         </div>
         
         <div class="ice bg-white">
-            <img class="max-w-[200px]" src="/img/carus04.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+            <div class="img1 w-64">
+                <img src="/img/carus04.png" alt="ice cream">
+            </div>
             <p class="text-center">Peanut Butter Paradise</p>
             <div class="pal flex gap-16 justify-center">
                 <p class="text-xl ">7&#x20AC;</p>
@@ -136,7 +142,9 @@
         </div>
 
         <div class="ice bg-white">
-            <img class="max-w-[200px]" src="/img/carus05.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+            <div class="img1 w-64">
+                <img src="/img/carus05.png" alt="ice cream">
+            </div>
             <p class="text-center">Strawberry Swirl Symphony</p>
             <div class="pal flex gap-16 justify-center">
                 <p class="text-xl ">10&#x20AC;</p>
@@ -145,7 +153,9 @@
         </div>
 
         <div class="ice bg-white">
-            <img class="max-w-[200px]" src="/img/carus06.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+            <div class="img1 w-64">
+                <img src="/img/carus06.png" alt="ice cream">
+            </div>
             <p class="text-center">Coconut Caramel Crunch</p>
             <div class="pal flex gap-16 justify-center">
                 <p class="text-xl ">9&#x20AC;</p>
@@ -154,7 +164,9 @@
         </div>
         
         <div class="ice bg-white">
-            <img class="max-w-[200px]" src="/img/carus07.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+            <div class="img1 w-64">
+                <img src="/img/carus07.png" alt="ice cream">
+            </div>
             <p class="text-center">Trsdfsfdopical Paradise</p>
             <div class="pal flex gap-16 justify-center">
                 <p class="text-xl ">10&#x20AC;</p>
@@ -163,7 +175,9 @@
         </div>
 
         <div class="ice bg-white">
-            <img class="max-w-[200px]" src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+            <div class="img1 w-64">
+                <img src="/img/carus01.png" alt="ice cream">
+            </div>
             <p class="text-center">Trsdfsfdopical Paradise</p>
             <div class="pal flex gap-16 justify-center">
                 <p class="text-xl ">10&#x20AC;</p>
@@ -180,7 +194,7 @@
     <h1 class="jul text-4xl uppercase">our Customer reviews</h1>
 </div>
 
-<div class="all-cus flex flex-col items-center mx-3">
+<div class="all-cus flex flex-col items-center mx-10">
     <div class="cus mt-10 ">
     
         <div class="rev1 flex gap-5 profile-bg p-3 mt-2">
@@ -224,9 +238,9 @@
 
 <!-- Events -->
 
-<div class="event mt-10 flex flex-col-reverse cus-bg rounded-2xl">
-    <div class="img3">
-        <img src="/img/image event.png" alt="ice cream">
+<div class="event mt-10 flex flex-col-reverse cus-bg rounded-2xl p-5">
+    <div class="img3 mx-auto">
+        <img class="w-96" src="/img/image event.png" alt="ice cream">
     </div>
     <div class="event-text mt-5 flex flex-col justify-center items-center">
         <h1 class="jul text-4xl uppercase mb-5 text-center">Events & Catering</h1>
@@ -241,33 +255,94 @@
 
 <div class="flavors mt-10">
     <div class="cat flex justify-between mx-8 items-center">
-        <h1 class="text-neutral-800 jul text-4xl ">Our Flavors</h1>
-        <div class="arrows flex gap-2">
-            <div class="leftb cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full ">
-                <i class="fa-solid fa-chevron-left" onclick="prevImage()"></i>
-            </div>
-            <div class="rightb cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full">
-                <i class="fa-solid fa-chevron-right" onclick="nextImage()"></i>
-            </div>
+      <h1 class="text-neutral-800 jul text-4xl ">Our Flavors</h1>
+      <div class="arrows flex gap-2">
+        <div class="leftf cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full ">
+          <i class="fa-solid fa-chevron-left" onclick="prevImage1()"></i>
         </div>
+        <div class="rightf cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full">
+          <i class="fa-solid fa-chevron-right" onclick="nextImage1()"></i>
+        </div>
+      </div>
     </div>
-
-    <!-- flavor carusel -->
-
-    <div class="first-f mt-8 flex flex-col gap-3">
-        <div class="txt">
+  
+    <!-- flavor carousel -->
+    <div class="all-carusel2 w-11/12 overflow-hidden flex mx-6" id="flavorSlider">
+      <div class="ice2">
+        <div class="mt-8 flex flex-col gap-3 w-80">
+          <div class="txt">
             <h1 class="text-5xl text-neutral-400 mb-5">01</h1>
-            <h3 class="font-bold text-2xl mb-3">Berrylicious Dream:</h3>
+            <h3 class="font-bold text-2xl mb-3">Berrylicious Dream</h3>
             <p>Experience the burst of freshness with a medley of handpicked berries, perfectly churned into a velvety ice cream that's both fruity and luscious.</p>
             <p class="text-xl text-neutral-400 my-4">15.99&#x20AC;</p>
-        </div>
-        <div class="img4">
+          </div>
+          <div class="img4 w-80">
             <img src="img/image box1.png" alt="">
+          </div>
         </div>
+      </div>
+  
+      <div class="ice2">
+        <div class="mt-8 flex flex-col gap-3 w-80">
+          <div class="txt">
+            <h1 class="text-5xl text-neutral-400 mb-5">02</h1>
+            <h3 class="font-bold text-2xl mb-3">Vanilla Velvet Symphony</h3>
+            <p>Indulge in the harmonious notes of classic vanilla, creating a velvety smooth symphony that satisfies your cravings with every spoonful.</p>
+            <p class="text-xl text-neutral-400 my-4">14.99&#x20AC;</p>
+          </div>
+          <div class="img4 w-80">
+            <img src="img/image box1.png" alt="">
+          </div>
+        </div>
+      </div>
+  
+      <div class="ice2">
+        <div class="mt-8 flex flex-col gap-3 w-80">
+          <div class="txt">
+            <h1 class="text-5xl text-neutral-400 mb-5">03</h1>
+            <h3 class="font-bold text-2xl mb-3">Mango Tango Delight</h3>
+            <p>A tropical delight that captures the essence of ripe mangoes, creating a refreshing and exotic treat that transports your taste buds to paradise.</p>
+            <p class="text-xl text-neutral-400 my-4">16.99&#x20AC;</p>
+          </div>
+          <div class="img4 w-80">
+            <img src="img/image box2.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="ice2">
+        <div class="mt-8 flex flex-col gap-3 w-80">
+          <div class="txt">
+            <h1 class="text-5xl text-neutral-400 mb-5">04</h1>
+            <h3 class="font-bold text-2xl mb-3">Caramel Bliss Blast</h3>
+            <p>A heavenly blend of rich caramel swirls and crunchy toffee bits, creating a symphony of sweet indulgence in every bite.</p>
+            <p class="text-xl text-neutral-400 my-4">14.99&#x20AC;</p>
+          </div>
+          <div class="img4 w-80">
+            <img src="img/image box3.png" alt="">
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
 
 
     <!-- subscribe -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
  
 
