@@ -6,6 +6,8 @@
     <title>Scoopsy</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/095c0db03e.js" crossorigin="anonymous"></script>
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,120 +83,234 @@
 
 <!-- Specials section -->
 
-<div class="Specials">
-        <div class="cat flex justify-between mx-8">
-            <h1 class="text-neutral-800 jul text-4xl ">Specials</h1>
-            <div class="arrows flex gap-2">
-                <div class="left cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full ">
-                    <i class="fa-solid fa-chevron-left" onclick="prevImage()"></i>
-                </div>
-                <div class="left cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full">
-                    <i class="fa-solid fa-chevron-right" onclick="nextImage()"></i>
-                </div>
+<div class="Specials ">
+    <div class="cat flex justify-between mx-8">
+        <h1 class="text-neutral-800 jul text-4xl ">Specials</h1>
+        <div class="arrows flex gap-2">
+            <div class="leftb cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full ">
+                <i class="fa-solid fa-chevron-left" onclick="prevImage()"></i>
+            </div>
+            <div class="rightb cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full">
+                <i class="fa-solid fa-chevron-right" onclick="nextImage()"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- caurel -->
+    <div class="flex justify-center">
+    <div class="all-carusel w-11/12 overflow-hidden flex justify-center" id="imageSlider">
+        <div class="ice bg-white ">
+            <img class="max-w-[200px]" src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+            <p class="text-center">Tropical Paradise</p>
+            <div class="pal flex gap-16 justify-center">
+                <p class="text-xl ">10&#x20AC;</p>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
             </div>
         </div>
 
-        <!-- caurel -->
-        <div class="all-carusel mx-8 w-10/12 h-[430px] border-2 overflow-hidden flex">
-            <div class="ice bg-white">
-                <img class="max-w-xs" src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
-                <p class="text-center">Tropical Paradise</p>
-                <div class="pal flex gap-16 justify-center">
-                    <p class="text-xl ">10&#x20AC;</p>
-                    <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
-                </div>
+        <div class="ice bg-white">
+            <img class="max-w-[200px]" src="/img/carus02.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+            <p class="text-center">Midnight Mocha Madness</p>
+            <div class="pal flex gap-16 justify-center">
+                <p class="text-xl ">12&#x20AC;</p>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
             </div>
+        </div>
 
-            <div class="ice bg-white">
-                <img class="max-w-xs" src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
-                <p class="text-center">Tropisdfsdfcal Paradise</p>
-                <div class="pal flex gap-16 justify-center">
-                    <p class="text-xl ">10&#x20AC;</p>
-                    <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
-                </div>
+        <div class="ice bg-white">
+            <img class="max-w-[200px]" src="/img/carus03.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+            <p class="text-center">Citrus Burst</p>
+            <div class="pal flex gap-16 justify-center">
+                <p class="text-xl ">10&#x20AC;</p>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
             </div>
-
-            <div class="ice bg-white">
-                <img class="max-w-xs" src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
-                <p class="text-center">Tropicsdfsdfal Paradise</p>
-                <div class="pal flex gap-16 justify-center">
-                    <p class="text-xl ">10&#x20AC;</p>
-                    <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
-                </div>
-            </div>
-            
-            <div class="ice bg-white">
-                <img class="max-w-xs" src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
-                <p class="text-center">Trsdfsfdopical Paradise</p>
-                <div class="pal flex gap-16 justify-center">
-                    <p class="text-xl ">10&#x20AC;</p>
-                    <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
-                </div>
-            </div>
-
-            <div class="ice bg-white">
-                <img class="max-w-xs" src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
-                <p class="text-center">Trsdfsfdopical Paradise</p>
-                <div class="pal flex gap-16 justify-center">
-                    <p class="text-xl ">10&#x20AC;</p>
-                    <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
-                </div>
-            </div>
-
-            <div class="ice bg-white">
-                <img class="max-w-xs" src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
-                <p class="text-center">Tropicsdfsdfal Paradise</p>
-                <div class="pal flex gap-16 justify-center">
-                    <p class="text-xl ">10&#x20AC;</p>
-                    <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
-                </div>
-            </div>
-            
-            <div class="ice bg-white">
-                <img class="max-w-xs" src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
-                <p class="text-center">Trsdfsfdopical Paradise</p>
-                <div class="pal flex gap-16 justify-center">
-                    <p class="text-xl ">10&#x20AC;</p>
-                    <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
-                </div>
-            </div>
-
-            <div class="ice bg-white">
-                <img class="max-w-xs" src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
-                <p class="text-center">Trsdfsfdopical Paradise</p>
-                <div class="pal flex gap-16 justify-center">
-                    <p class="text-xl ">10&#x20AC;</p>
-                    <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
-                </div>
-            </div>
-
-            
-
- 
-
+        </div>
         
+        <div class="ice bg-white">
+            <img class="max-w-[200px]" src="/img/carus04.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+            <p class="text-center">Peanut Butter Paradise</p>
+            <div class="pal flex gap-16 justify-center">
+                <p class="text-xl ">7&#x20AC;</p>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
+            </div>
+        </div>
 
+        <div class="ice bg-white">
+            <img class="max-w-[200px]" src="/img/carus05.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+            <p class="text-center">Strawberry Swirl Symphony</p>
+            <div class="pal flex gap-16 justify-center">
+                <p class="text-xl ">10&#x20AC;</p>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
+            </div>
+        </div>
+
+        <div class="ice bg-white">
+            <img class="max-w-[200px]" src="/img/carus06.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+            <p class="text-center">Coconut Caramel Crunch</p>
+            <div class="pal flex gap-16 justify-center">
+                <p class="text-xl ">9&#x20AC;</p>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
+            </div>
+        </div>
+        
+        <div class="ice bg-white">
+            <img class="max-w-[200px]" src="/img/carus07.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+            <p class="text-center">Trsdfsfdopical Paradise</p>
+            <div class="pal flex gap-16 justify-center">
+                <p class="text-xl ">10&#x20AC;</p>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
+            </div>
+        </div>
+
+        <div class="ice bg-white">
+            <img class="max-w-[200px]" src="/img/carus01.png" alt="ice cream" class="shadow-[7px_7px_0px_1px_#00000024]">
+            <p class="text-center">Trsdfsfdopical Paradise</p>
+            <div class="pal flex gap-16 justify-center">
+                <p class="text-xl ">10&#x20AC;</p>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
+            </div>
+        </div>
+
+</div>
+</div>
+
+<!-- our Customer reviews -->
+
+<div class="custumer text-center mt-20">
+    <h1 class="jul text-4xl uppercase">our Customer reviews</h1>
+</div>
+
+<div class="all-cus flex flex-col items-center mx-3">
+    <div class="cus mt-10 ">
+    
+        <div class="rev1 flex gap-5 profile-bg p-3 mt-2">
+            <div class="img">
+                <img src="/img/Ellipse 1.png" alt="profile photo">
+            </div>
+    
+            <div class="txt">
+                <h3 class="">"Absolutely loved the Midnight Mocha Madness ice cream from this shop! The rich chocolate and coffee flavors were a perfect blend. Can't wait to try more!"</h3>
+                <p class="font-bold pl-3">-Elara Frost</p>
+            </div>
+        </div>
+    
+        <div class="rev1 flex gap-5 profile-bg p-3 mt-2">
+            <div class="img">
+                <img src="/img/Ellipse 2.png" alt="profile photo">
+            </div>
+    
+            <div class="txt">
+                <h3>"Double Fudge Fantasy exceeded my expectations! The double dose of fudge made every bite a chocolate lover's dream. Fantastic ice cream shop!"</h3>
+                <p class="font-bold pl-3">-Orion Blaze</p>
+            </div>
+        </div>
+    
+        <div class="rev1 flex gap-5 profile-bg p-3 mt-2">
+            <div class="img">
+                <img src="/img/Ellipse 3.png" alt="profile photo">
+            </div>
+    
+            <div class="txt">
+                <h3>"Blueberry Cheesecake Marvel is a true marvel! The blueberry swirls and cheesecake bites create a delightful combination. Great quality and friendly staff."</h3>
+                <p class="font-bold pl-3">-Ema Stone</p>
+            </div>
+        </div>
+    </div>
+    <div class="img2 -mt-5 w-64 rotate-12 relative -z-10">
+        <img src="/img/image rew.png" alt="ice cream">
+    </div>
 
 </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<!-- Events -->
 
+<div class="event mt-10 flex flex-col-reverse cus-bg rounded-2xl">
+    <div class="img3">
+        <img src="/img/image event.png" alt="ice cream">
+    </div>
+    <div class="event-text mt-5 flex flex-col justify-center items-center">
+        <h1 class="jul text-4xl uppercase mb-5 text-center">Events & Catering</h1>
+        <p class="text-center">Scoopsy: Where Every Scoop Tells a Story! Indulge in a world of delightful flavors and creamy concoctions. Our ice cream creations are crafted to make every moment sweet and memorable. Scoop into happiness with Scoopsy!</p>
+        <div class="buttons my-4">
+            <button class="beige px-3 py-1 rounded-2xl text-neutral-800">Read more</button>
+        </div>
+    </div>
+</div>
+
+<!-- flavors -->
+
+<div class="flavors mt-10">
+    <div class="cat flex justify-between mx-8 items-center">
+        <h1 class="text-neutral-800 jul text-4xl ">Our Flavors</h1>
+        <div class="arrows flex gap-2">
+            <div class="leftb cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full ">
+                <i class="fa-solid fa-chevron-left" onclick="prevImage()"></i>
+            </div>
+            <div class="rightb cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full">
+                <i class="fa-solid fa-chevron-right" onclick="nextImage()"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- flavor carusel -->
+
+    <div class="first-f mt-8 flex flex-col gap-3">
+        <div class="txt">
+            <h1 class="text-5xl text-neutral-400 mb-5">01</h1>
+            <h3 class="font-bold text-2xl mb-3">Berrylicious Dream:</h3>
+            <p>Experience the burst of freshness with a medley of handpicked berries, perfectly churned into a velvety ice cream that's both fruity and luscious.</p>
+            <p class="text-xl text-neutral-400 my-4">15.99&#x20AC;</p>
+        </div>
+        <div class="img4">
+            <img src="img/image box1.png" alt="">
+        </div>
+    </div>
+
+
+    <!-- subscribe -->
+
+ 
+
+<!-- footer -->
+
+
+<div class="fot">
+    <div class="logo w-36 mt-9 relative z-20">
+        <a href="index.html"><img src="/img/logo_ice.png" alt="logo"></a>
+    </div>
+
+    <div class="ad">
+        <h3>Address</h3>
+        <p>nowhere str.40
+        nowhere city</p>
+    </div>
+
+    <div class="shop">
+        <h3>Shop</h3>
+        <p>Our Flavors</p>
+        <p>Specials</p>
+    </div>
+
+    <div class="social xs:w-96">
+        <i class="fa-brands fa-square-facebook"></i>
+        <i class="fa-brands fa-square-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+    </div>
+</div>
+
+<div class="footer w-full -mt-20">
+    <svg viewBox="0 0 1920 442" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1755 370C1807 340.419 1916.41 492.657 1920 506.777V563H0V0C2.86888 15.1469 15.0616 44.3622 40.8816 40.0493C73.1565 34.658 100.411 63.9247 198.67 140.172C296.929 216.42 285.454 271.873 308.405 325.015C326.766 367.529 353.351 352.998 364.348 340.419C409.533 308.328 507.362 263.401 537.198 340.419C574.494 436.691 572.388 373.663 668.5 414C765 454.5 802.577 468.268 853.5 392.791C904.423 317.313 1033.52 410.505 1179.11 392.791C1324.71 375.077 1317.64 367.019 1441 414C1564.36 460.981 1617.72 448.096 1755 370Z" fill="url(#paint0_linear_179_126)"/>
+        <defs>
+        <linearGradient id="paint0_linear_179_126" x1="960" y1="563" x2="960" y2="0" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#F09ABE"/>
+        <stop offset="1" stop-color="#F09ABE" stop-opacity="0"/>
+        </linearGradient>
+        </defs>
+        </svg>
+
+</div>
 
     
 

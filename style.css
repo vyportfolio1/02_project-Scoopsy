@@ -31,4 +31,38 @@
     transition: transform 0.5s ease-in-out;
   }
 
+  .profile-bg{
+    background-color: rgba(245, 228, 244, 1);
+  }
+
+  .cus-bg{
+    background-color: rgba(210, 239, 241, 1);
+  }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define custom media queries within @screen */
+@screen sm {
+  /* Styles for small screens (default: min-width: 640px) */
+}
+
+@screen md {
+  /* Styles for medium screens (default: min-width: 768px) */
+}
+
+@screen lg {
+  /* Styles for large screens (default: min-width: 1024px) */
+}
+
+/* Add your custom media queries */
+@media (min-width: 1200px) {
+  /* Custom styles for screens with a minimum width of 1200px */
+}
+
+@media (max-width: 500px) {
+  /* Custom styles for screens with a maximum width of 500px */
+}
+
  
