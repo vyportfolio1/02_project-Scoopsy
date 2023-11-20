@@ -41,7 +41,6 @@
                     <a class="hidden xl:block" href="#">Specials</a>
                     <a class="hidden xl:block" href="#">Reviews</a>
                     <a class="hidden xl:block" href="#">Events & Catering</a>
-                    <a class="hidden xl:block" href="#">Our Flavors</a>
                         <div class="logo w-36 mt-9">
                             <a href="index.html"><img src="/img/logo_ice.png" alt="logo"></a>
                         </div>
@@ -53,9 +52,31 @@
                             <a href="#"><i class="fa-regular fa-user"></i></a>
                         </div>
 
+                        <!-- hidden meniu -->
                         <div class="burger-meniu xl:hidden">
-                            <i class="fa-solid fa-xmarks-lines"></i>
+                            <i class="fa-solid fa-xmarks-lines cursor-pointer"></i>
+                            <div class="mm hidden absolute z-50 pink left-0 p-8 h-screen w-full transition-opacity duration-1000 ease-in -top-3">
+                                <div class="meniu-position flex flex-col items-center gap-5 text-white pt-20">
+                                    <a class="lily text-5xl" href="#">Specials</a>
+                                    <a class="lily text-5xl"  href="#">Reviews</a>
+                                    <a class="lily text-5xl text-center"  href="#">Events & Catering</a>
+                                    <a class="lily text-5xl"  href="#">Shop</a>
+                                    <a class="lily text-5xl"  href="#">Contact Us</a>
+                                        <div class="link flex justify-center text-2xl gap-9">
+                                            <a href="#"><i class="fa-regular fa-comments"></i></a>
+                                            <a href="#"><i class="fa-regular fa-thumbs-up"></i></a>
+                                            <a href="#"><i class="fa-regular fa-user"></i></a>
+                                        </div>
+                                        <div class="close text-7xl my-6">
+                                            <i class="fa-solid fa-circle-xmark cursor-pointer"></i>
+                                        </div>
+
+                                </div>
+
+                            </div>
                         </div>
+                        <!-- hidden meniu -->
+
                 </div>
             </div>
 
@@ -63,27 +84,27 @@
 
     <!-- hero section -->
 
-<div class="hero-all mt-28 flex flex-col items-center mx-8 md:flex-row md:justify-center">
+<div class="hero-all mt-28 flex flex-col items-center mx-8 md:flex-row md:justify-center lg:mt-40 lg:gap-10 lg:align-middle lg:items-center xl:gap-24 ">
 
-            <img src="img/image 112.png" alt="ice cream" class="-rotate-12 hidden md:block md:w-[200px] md:-mt-8 ">
+            <img src="img/image 112.png" alt="ice cream" class="-rotate-12 hidden md:block md:w-[200px] md:-mt-8 lg:w-[220px] xl:w-[240px] 2xl:w-[300px] xl:mt-40px">
 
         <div class="text-mid text-center flex flex-col justify-center items-center">
-                <h1 class="lily main-pink text-6xl md:text-8xl md:mb-6">Frozen Joy</h1>
-                <p class="my-3 w-80">Savoring creamy delights under the summer sun, each spoonful brings pure happiness, a symphony of flavors dancing on the palate.</p>
-                <div class="buttons ">
+                <h1 class="lily main-pink text-6xl md:text-8xl md:mb-6 lg:w-96 lg:text-9xl">Frozen Joy</h1>
+                <p class="my-3 w-80 relative z-20 lg:text-lg lg:mt-9 lg:w-[350px]">Savoring creamy delights under the summer sun, each spoonful brings pure happiness, a symphony of flavors dancing on the palate.</p>
+                <div class="buttons flex gap-7">
                     <button class="pink px-3 py-1 rounded-2xl text-white">Shop now</button>
                     <button class="beige px-3 py-1 rounded-2xl text-neutral-800">Read more</button>
                 </div>
         </div>
 
-            <img src="img/image 113.png" alt="ice cream" class="rotate-6 w-[300px] -mt-36 relative -z-10 md:w-[200px]">
+            <img src="img/image 113.png" alt="ice cream" class="rotate-6 w-[300px] -mt-36 relative -z-10 md:w-[200px] lg:w-[220px] xl:w-[260px] 2xl:w-[350px]">
 </div>
 
 <!-- Specials section -->
 
 <div class="Specials ">
-    <div class="cat flex justify-between mx-8 md:mt-12">
-        <h1 class="text-neutral-800 jul text-4xl ">Specials</h1>
+    <div class="cat flex justify-between mx-8 md:mt-24 xl:mx-36">
+        <h1 class="text-neutral-800 jul text-4xl md:text-5xl">Specials</h1>
         <div class="arrows flex gap-2">
             <div class="leftb cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full ">
                 <i class="fa-solid fa-chevron-left" onclick="prevImage()"></i>
@@ -96,9 +117,9 @@
 
     <!-- caurel -->
     <div class="flex justify-center">
-    <div class="all-carusel w-11/12 overflow-hidden flex " id="imageSlider">
+    <div class="all-carusel w-11/12 overflow-hidden inline-flex" id="imageSlider">
         <div class="ice bg-white">
-            <div class="img1 w-64">
+            <div class="img1 w-64 xl:w-72">
                 <img src="/img/carus01.png" alt="ice cream">
             </div>
             <p class="text-center">Tropical Paradise</p>
@@ -109,7 +130,7 @@
         </div>
 
         <div class="ice bg-white">
-            <div class="img1 w-64">
+            <div class="img1 w-64 xl:w-72">
                 <img src="/img/carus02.png" alt="ice cream">
             </div>
             <p class="text-center">Midnight Mocha Madness</p>
@@ -120,7 +141,7 @@
         </div>
 
         <div class="ice bg-white">
-            <div class="img1 w-64">
+            <div class="img1 w-64 xl:w-72">
                 <img src="/img/carus03.png" alt="ice cream">
             </div>
             <p class="text-center">Citrus Burst</p>
@@ -131,7 +152,7 @@
         </div>
         
         <div class="ice bg-white">
-            <div class="img1 w-64">
+            <div class="img1 w-64 xl:w-72">
                 <img src="/img/carus04.png" alt="ice cream">
             </div>
             <p class="text-center">Peanut Butter Paradise</p>
@@ -142,7 +163,7 @@
         </div>
 
         <div class="ice bg-white">
-            <div class="img1 w-64">
+            <div class="img1 w-64 xl:w-72">
                 <img src="/img/carus05.png" alt="ice cream">
             </div>
             <p class="text-center">Strawberry Swirl Symphony</p>
@@ -153,7 +174,7 @@
         </div>
 
         <div class="ice bg-white">
-            <div class="img1 w-64">
+            <div class="img1 w-64 xl:w-72">
                 <img src="/img/carus06.png" alt="ice cream">
             </div>
             <p class="text-center">Coconut Caramel Crunch</p>
@@ -164,7 +185,7 @@
         </div>
         
         <div class="ice bg-white">
-            <div class="img1 w-64">
+            <div class="img1 w-64 xl:w-72">
                 <img src="/img/carus07.png" alt="ice cream">
             </div>
             <p class="text-center">Trsdfsfdopical Paradise</p>
@@ -175,7 +196,7 @@
         </div>
 
         <div class="ice bg-white">
-            <div class="img1 w-64">
+            <div class="img1 w-64 xl:w-72">
                 <img src="/img/carus01.png" alt="ice cream">
             </div>
             <p class="text-center">Trsdfsfdopical Paradise</p>
@@ -190,14 +211,28 @@
 
 <!-- our Customer reviews -->
 
-<div class="custumer text-center mt-20">
-    <h1 class="jul text-4xl uppercase">our Customer reviews</h1>
+<div class="bg w-full -z-20 absolute top-[1400px]">
+    <svg viewBox="0 0 1916 1543" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M-4 973.017C10.521 1018.61 23.7918 1063.94 34.6683 1108.32C123.977 1472.72 466.909 1495.44 958.477 1528.01L958.487 1528.01C1007.96 1531.28 1058.93 1534.66 1111.31 1538.5C1569.55 1572.06 1807.63 1409.8 1869.38 1324.48C1883.2 1307.91 1899.03 1288.52 1916 1267.23V258.35C1870.52 216.071 1816.71 174.215 1753.07 133.665C1390.35 -97.4772 693.072 22.8024 389.774 111.835C377.423 115.402 281.699 133.152 -2.38628 175.613C-2.92568 175.694 -3.46359 175.776 -4 175.858V973.017Z" fill="url(#paint0_linear_235_17)"/>
+        <defs>
+        <linearGradient id="paint0_linear_235_17" x1="581.833" y1="-131" x2="1730.86" y2="1822.57" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#F2A7C7"/>
+        <stop offset="1" stop-color="#F2A7C7" stop-opacity="0"/>
+        </linearGradient>
+        </defs>
+        </svg>
 </div>
 
-<div class="all-cus flex flex-col items-center mx-10">
-    <div class="cus mt-10 ">
+
+<div class="white-bg bg-white md:mx-7 lg:mx-14">
+<div class="custumer text-center mt-20">
+    <h1 class="jul text-4xl uppercase md:text-5xl md:mb-9">our Customer reviews</h1>
+</div>
+
+<div class="all-cus flex flex-col items-center mx-10 md:flex-row md:justify-center xl:gap-24">
+    <div class="cus mt-10 relative z-20">
     
-        <div class="rev1 flex gap-5 profile-bg p-3 mt-2">
+        <div class="rev1 flex gap-5 profile-bg p-3 mt-2 md:w-[500px] md:rotate-3">
             <div class="img">
                 <img src="/img/Ellipse 1.png" alt="profile photo">
             </div>
@@ -208,7 +243,7 @@
             </div>
         </div>
     
-        <div class="rev1 flex gap-5 profile-bg p-3 mt-2">
+        <div class="rev1 flex gap-5 profile-bg p-3 mt-2 md:w-[500px] md:-rotate-3 md:my-12 md:ml-16">
             <div class="img">
                 <img src="/img/Ellipse 2.png" alt="profile photo">
             </div>
@@ -219,7 +254,7 @@
             </div>
         </div>
     
-        <div class="rev1 flex gap-5 profile-bg p-3 mt-2">
+        <div class="rev1 flex gap-5 profile-bg p-3 mt-2 md:w-[400px] md:rotate-2">
             <div class="img">
                 <img src="/img/Ellipse 3.png" alt="profile photo">
             </div>
@@ -230,7 +265,7 @@
             </div>
         </div>
     </div>
-    <div class="img2 -mt-5 w-64 rotate-12 relative -z-10">
+    <div class="img2 -mt-5 w-64 rotate-12 relative  z-10 md:rotate-6 md:hidden lg:block lg:w-[400px] lg:-rotate-2">
         <img src="/img/image rew.png" alt="ice cream">
     </div>
 
@@ -238,24 +273,24 @@
 
 <!-- Events -->
 
-<div class="event mt-10 flex flex-col-reverse cus-bg rounded-2xl p-5">
+<div class="event mt-10 flex flex-col-reverse cus-bg rounded-2xl p-5 justify-center md:flex-row lg:mx-16 2xl:px-40">
     <div class="img3 mx-auto">
-        <img class="w-96" src="/img/image event.png" alt="ice cream">
+        <img class="w-96 xl:w-[450px]" src="/img/image event.png" alt="ice cream">
     </div>
-    <div class="event-text mt-5 flex flex-col justify-center items-center">
+    <div class="event-text mt-5 flex flex-col justify-center items-center xl:w-[500px]">
         <h1 class="jul text-4xl uppercase mb-5 text-center">Events & Catering</h1>
-        <p class="text-center">Scoopsy: Where Every Scoop Tells a Story! Indulge in a world of delightful flavors and creamy concoctions. Our ice cream creations are crafted to make every moment sweet and memorable. Scoop into happiness with Scoopsy!</p>
+        <p class="text-center md:w-72">Scoopsy: Where Every Scoop Tells a Story! Indulge in a world of delightful flavors and creamy concoctions. Our ice cream creations are crafted to make every moment sweet and memorable. Scoop into happiness with Scoopsy!</p>
         <div class="buttons my-4">
             <button class="beige px-3 py-1 rounded-2xl text-neutral-800">Read more</button>
         </div>
     </div>
 </div>
 
-<!-- flavors -->
+<!-- shop -->
 
-<div class="flavors mt-10">
-    <div class="cat flex justify-between mx-8 items-center">
-      <h1 class="text-neutral-800 jul text-4xl ">Our Flavors</h1>
+<div class="flavors mt-20">
+    <div class="cat flex justify-between mx-8 items-center xl:mx-36">
+      <h1 class="text-neutral-800 jul text-4xl ">Shop</h1>
       <div class="arrows flex gap-2">
         <div class="leftf cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full ">
           <i class="fa-solid fa-chevron-left" onclick="prevImage1()"></i>
@@ -266,10 +301,11 @@
       </div>
     </div>
   
-    <!-- flavor carousel -->
+    <!-- shop carousel -->
     <div class="all-carusel2 w-11/12 overflow-hidden flex mx-6" id="flavorSlider">
+        
       <div class="ice2">
-        <div class="mt-8 flex flex-col gap-3 w-80">
+        <div class="mt-8 flex flex-col gap-3 w-64" >
           <div class="txt">
             <h1 class="text-5xl text-neutral-400 mb-5">01</h1>
             <h3 class="font-bold text-2xl mb-3">Berrylicious Dream</h3>
@@ -283,7 +319,7 @@
       </div>
   
       <div class="ice2">
-        <div class="mt-8 flex flex-col gap-3 w-80">
+        <div class="mt-8 flex flex-col gap-3 w-64">
           <div class="txt">
             <h1 class="text-5xl text-neutral-400 mb-5">02</h1>
             <h3 class="font-bold text-2xl mb-3">Vanilla Velvet Symphony</h3>
@@ -297,7 +333,7 @@
       </div>
   
       <div class="ice2">
-        <div class="mt-8 flex flex-col gap-3 w-80">
+        <div class="mt-8 flex flex-col gap-3 w-64">
           <div class="txt">
             <h1 class="text-5xl text-neutral-400 mb-5">03</h1>
             <h3 class="font-bold text-2xl mb-3">Mango Tango Delight</h3>
@@ -311,10 +347,10 @@
       </div>
 
       <div class="ice2">
-        <div class="mt-8 flex flex-col gap-3 w-80">
+        <div class="mt-8 flex flex-col gap-3 w-64">
           <div class="txt">
             <h1 class="text-5xl text-neutral-400 mb-5">04</h1>
-            <h3 class="font-bold text-2xl mb-3">Caramel Bliss Blast</h3>
+            <h3 class="font-bold text-2xl mb-3">Caramel Bliss Blast Dream</h3>
             <p>A heavenly blend of rich caramel swirls and crunchy toffee bits, creating a symphony of sweet indulgence in every bite.</p>
             <p class="text-xl text-neutral-400 my-4">14.99&#x20AC;</p>
           </div>
@@ -326,55 +362,53 @@
 
     </div>
   </div>
-
+</div>
 
     <!-- subscribe -->
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+ <div class="sub my-20  flex flex-col items-center justify-center">
+    <h1 class="lily main-pink text-6xl md:text-8xl md:mb-6 lg:w-96 text-center">Subscribe to newsletter</h1>
+    <div class="mb-6 mx-14 flex flex-col items-center">
+        <label for="email" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Email address</label>
+        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 px-7 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@mail.com" required>
+    </div> 
+    <div class="buttons flex gap-7">
+        <button class="beige px-3 py-1 rounded-2xl text-neutral-800">Subscribe</button>
+    </div>
+ </div>
 
  
 
 <!-- footer -->
 
 
-<div class="fot">
-    <div class="logo w-36 mt-9 relative z-20">
+<div class="fot flex flex-col items-center sm:flex-row sm:justify-center sm:gap-6 sm:scroll-pt-28 md:gap-10 lg:gap-20">
+    <div class="logo w-36 mt-9 relative -z-20">
         <a href="index.html"><img src="/img/logo_ice.png" alt="logo"></a>
     </div>
 
-    <div class="ad">
-        <h3>Address</h3>
-        <p>nowhere str.40
-        nowhere city</p>
+    <div class="ad flex flex-col items-center gap-1">
+        <h3 class="jul text-2xl lg:text-3xl">Address</h3>
+        <a class="text-neutral-400" href="#">Nowhere str.40</a>
+        <a class="text-neutral-400" href="#">Nowhere city</a>
+
     </div>
 
-    <div class="shop">
-        <h3>Shop</h3>
-        <p>Our Flavors</p>
-        <p>Specials</p>
+    <div class="shop flex flex-col items-center gap-1 my-7">
+        <h3 class="jul text-2xl lg:text-3xl">Shop</h3>
+        <a class="text-neutral-400" href="#">Our Flavors</a>
+        <a class="text-neutral-400" href="#">Specials</a>
     </div>
 
-    <div class="social xs:w-96">
-        <i class="fa-brands fa-square-facebook"></i>
-        <i class="fa-brands fa-square-instagram"></i>
-        <i class="fa-brands fa-youtube"></i>
-        <i class="fa-brands fa-x-twitter"></i>
+    <div class="social text-2xl flex gap-3">
+        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
     </div>
 </div>
 
-<div class="footer w-full -mt-20">
+<div class="footer w-full -mt-40 absolute -z-40 xl:-mt-60 2xl:-mt-80">
     <svg viewBox="0 0 1920 442" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1755 370C1807 340.419 1916.41 492.657 1920 506.777V563H0V0C2.86888 15.1469 15.0616 44.3622 40.8816 40.0493C73.1565 34.658 100.411 63.9247 198.67 140.172C296.929 216.42 285.454 271.873 308.405 325.015C326.766 367.529 353.351 352.998 364.348 340.419C409.533 308.328 507.362 263.401 537.198 340.419C574.494 436.691 572.388 373.663 668.5 414C765 454.5 802.577 468.268 853.5 392.791C904.423 317.313 1033.52 410.505 1179.11 392.791C1324.71 375.077 1317.64 367.019 1441 414C1564.36 460.981 1617.72 448.096 1755 370Z" fill="url(#paint0_linear_179_126)"/>
         <defs>
