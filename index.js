@@ -64,16 +64,14 @@ document.querySelector('.rightf').addEventListener('click', nextFlavor);
 
 showFlavor(currentFlavorIndex);
 
-const meniuIcon = document.querySelector(".fa-xmarks-lines")
-const meniuClose = document.querySelector(".fa-circle-xmark")
-const hiddenMeniu = document.querySelector(".mm")
+const meniuIcon = document.querySelector(".fa-xmarks-lines");
+const meniuClose = document.querySelector(".fa-circle-xmark");
+const hiddenMeniu = document.querySelector(".mm");
 
-meniuIcon.addEventListener("click", ()=>{
-  hiddenMeniu.classList.remove("hidden");
-  hiddenMeniu.style.transition = "1s ease-in"
-})
+meniuIcon.addEventListener("click", () => {
+  hiddenMeniu.classList.remove("invisible");
+});
 
-meniuClose.addEventListener("click", ()=>{
-  hiddenMeniu.classList.add("hidden")
-  hiddenMeniu.style.transition = "1s ease-in"
-})
+meniuClose.addEventListener("click", () => {
+  hiddenMeniu.classList.add("invisible");
+});
