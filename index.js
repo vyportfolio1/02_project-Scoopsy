@@ -70,10 +70,10 @@ const hiddenMeniu = document.querySelector(".mm")
 
 meniuIcon.addEventListener("click", ()=>{
   hiddenMeniu.classList.remove("hidden");
-  hiddenMeniu.style.transition = "opacity 1s ease-in"
+  hiddenMeniu.style.transition = "1s ease-in"
 })
 
 meniuClose.addEventListener("click", ()=>{
   hiddenMeniu.classList.add("hidden")
-  hiddenMeniu.style.transition = "opacity 1s ease-in"
+  hiddenMeniu.style.transition = "1s ease-in"
 })
