@@ -17,11 +17,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollMonitor/1.2.0/scrollMonitor.js"></script>
+
 </head>
 <body>
 
     <!-- nav -->
-    
+
+  
     <div class="nav relative">
         <div class="back absolute -z-10 w-full">
             <svg viewBox="0 0 1920 659" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,15 +40,15 @@
         </div>
 
             <div class="position pt-12 flex justify-center">
-                <div class="meniu w-11/12 h-10 bg-white rounded-3xl flex justify-around gap-10 items-center pop">
+                <div class="meniu w-11/12 h-10 bg-white rounded-3xl flex justify-around gap-10 items-center pop" id="menuItems">
                     <i class="fa-solid fa-x xl:hidden"></i>
-                    <a class="hidden xl:block" href="#">Specials</a>
-                    <a class="hidden xl:block" href="#">Reviews</a>
-                    <a class="hidden xl:block" href="#">Events & Catering</a>
+                    <a class="hidden xl:block" href="#Specials">Specials</a>
+                    <a class="hidden xl:block" href="#Reviews">Reviews</a>
+                    <a class="hidden xl:block" href="#Events">Events & Catering</a>
                         <div class="logo w-36 mt-9">
                             <a href="index.html"><img src="/img/logo_ice.png" alt="logo"></a>
                         </div>
-                    <a class="hidden xl:block" href="#">Shop</a>
+                    <a class="hidden xl:block" href="#Shop">Shop</a>
                     <a class="hidden xl:block" href="#">Contact Us</a>
                         <div class="link hidden xl:flex gap-5">
                             <a href="#"><i class="fa-regular fa-comments"></i></a>
@@ -57,10 +61,10 @@
                             <i class="fa-solid fa-xmarks-lines cursor-pointer"></i>
                             <div class="mm invisible absolute z-30 pink left-0 p-8 h-screen w-full  -top-3">
                                 <div class="meniu-position flex flex-col items-center gap-5 text-white pt-20">
-                                    <a class="lily text-5xl" href="#">Specials</a>
-                                    <a class="lily text-5xl"  href="#">Reviews</a>
-                                    <a class="lily text-5xl text-center"  href="#">Events & Catering</a>
-                                    <a class="lily text-5xl"  href="#">Shop</a>
+                                    <a class="lily text-5xl" href="#Special">Specials</a>
+                                    <a class="lily text-5xl"  href="#Reviews">Reviews</a>
+                                    <a class="lily text-5xl text-center"  href="#Events">Events & Catering</a>
+                                    <a class="lily text-5xl"  href="#Shop">Shop</a>
                                     <a class="lily text-5xl"  href="#">Contact Us</a>
                                         <div class="link flex justify-center text-2xl gap-9">
                                             <a href="#"><i class="fa-regular fa-comments"></i></a>
@@ -86,9 +90,9 @@
 
 <div class="hero-all mt-28 flex flex-col items-center mx-8 md:flex-row md:justify-center lg:mt-36 lg:gap-10 lg:align-middle lg:items-center xl:gap-24 ">
 
-            <img src="img/image 112.png" alt="ice cream" class="-rotate-12 hidden md:block md:w-[200px] md:relative z-20 md:-mt-8 lg:w-[220px] xl:w-[240px] 2xl:w-[300px] xl:mt-40px">
+            <img src="img/image 112.png" alt="ice cream" class="-rotate-12 hidden md:block md:w-[200px] md:relative z-20 md:-mt-8 lg:w-[220px] xl:w-[240px] 2xl:w-[300px] xl:mt-40px" id="image1">
 
-        <div class="text-mid text-center flex flex-col justify-center items-center">
+        <div class="text-mid text-center flex flex-col justify-center items-center" id="textSection">
                 <h1 class="lily main-pink text-6xl md:text-8xl md:mb-6 lg:w-96 lg:text-9xl">Frozen Joy</h1>
                 <p class="my-3 w-80 relative z-20 lg:text-lg lg:mt-9 lg:w-[350px]">Savoring creamy delights under the summer sun, each spoonful brings pure happiness, a symphony of flavors dancing on the palate.</p>
                 <div class="buttons flex gap-7">
@@ -97,12 +101,12 @@
                 </div>
         </div>
 
-            <img src="img/image 113.png" alt="ice cream" class="rotate-6 w-[300px] -mt-36 relative -z-10 md:w-[200px] lg:w-[220px] xl:w-[260px] 2xl:w-[350px]">
+            <img src="img/image 113.png" alt="ice cream" class="rotate-6 w-[300px] -mt-36 relative -z-10 md:w-[200px] lg:w-[220px] xl:w-[260px] 2xl:w-[350px]" id="image2">
 </div>
 
 <!-- Specials section -->
 
-<div class="Specials ">
+<div class="Specials " id="Specials">
     <div class="cat flex justify-between mx-8 md:mt-24 xl:mx-36">
         <h1 class="text-neutral-800 jul text-4xl md:text-5xl">Specials</h1>
         <div class="arrows flex gap-2">
@@ -116,7 +120,7 @@
     </div>
 
     <!-- caurel -->
-    <div class="flex justify-center">
+    <div class="flex justify-center" id="imageSlider">
     <div class="all-carusel w-11/12 overflow-hidden inline-flex" id="imageSlider">
         <div class="ice bg-white">
             <div class="img1 w-64 xl:w-72">
@@ -125,7 +129,7 @@
             <p class="text-center">Tropical Paradise</p>
             <div class="pal flex gap-16 justify-center">
                 <p class="text-xl ">10&#x20AC;</p>
-                <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink thumbs-up-icon" onclick="toggleThumbsUp(this)"></i>
             </div>
         </div>
 
@@ -136,7 +140,7 @@
             <p class="text-center">Midnight Mocha Madness</p>
             <div class="pal flex gap-16 justify-center">
                 <p class="text-xl ">12&#x20AC;</p>
-                <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink thumbs-up-icon" onclick="toggleThumbsUp(this)"></i>
             </div>
         </div>
 
@@ -147,7 +151,7 @@
             <p class="text-center">Citrus Burst</p>
             <div class="pal flex gap-16 justify-center">
                 <p class="text-xl ">10&#x20AC;</p>
-                <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink thumbs-up-icon" onclick="toggleThumbsUp(this)"></i>
             </div>
         </div>
         
@@ -158,7 +162,7 @@
             <p class="text-center">Peanut Butter Paradise</p>
             <div class="pal flex gap-16 justify-center">
                 <p class="text-xl ">7&#x20AC;</p>
-                <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink thumbs-up-icon" onclick="toggleThumbsUp(this)"></i>
             </div>
         </div>
 
@@ -169,7 +173,7 @@
             <p class="text-center">Strawberry Swirl Symphony</p>
             <div class="pal flex gap-16 justify-center">
                 <p class="text-xl ">10&#x20AC;</p>
-                <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink thumbs-up-icon" onclick="toggleThumbsUp(this)"></i>
             </div>
         </div>
 
@@ -180,7 +184,7 @@
             <p class="text-center">Coconut Caramel Crunch</p>
             <div class="pal flex gap-16 justify-center">
                 <p class="text-xl ">9&#x20AC;</p>
-                <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink thumbs-up-icon" onclick="toggleThumbsUp(this)"></i>
             </div>
         </div>
         
@@ -191,7 +195,7 @@
             <p class="text-center">Trsdfsfdopical Paradise</p>
             <div class="pal flex gap-16 justify-center">
                 <p class="text-xl ">10&#x20AC;</p>
-                <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink thumbs-up-icon" onclick="toggleThumbsUp(this)"></i>
             </div>
         </div>
 
@@ -202,7 +206,7 @@
             <p class="text-center">Trsdfsfdopical Paradise</p>
             <div class="pal flex gap-16 justify-center">
                 <p class="text-xl ">10&#x20AC;</p>
-                <i class="fa-regular fa-thumbs-up text-2xl main-pink"></i>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink thumbs-up-icon" onclick="toggleThumbsUp(this)"></i>
             </div>
         </div>
 
@@ -225,7 +229,7 @@
 
 
 <div class="white-bg bg-white md:mx-7 lg:mx-14">
-<div class="custumer text-center mt-20">
+<div class="custumer text-center mt-20" id="Reviews">
     <h1 class="jul text-4xl uppercase md:text-5xl md:mb-9">our Customer reviews</h1>
 </div>
 
@@ -243,7 +247,7 @@
             </div>
         </div>
     
-        <div class="rev1 flex gap-5 profile-bg p-3 mt-2 md:w-[500px] md:-rotate-3 md:my-12 md:ml-16">
+        <div class="rev2 flex gap-5 profile-bg p-3 mt-2 md:w-[500px] md:-rotate-3 md:my-12 md:ml-16">
             <div class="img">
                 <img src="/img/Ellipse 2.png" alt="profile photo">
             </div>
@@ -273,7 +277,7 @@
 
 <!-- Events -->
 
-<div class="event mt-10 flex flex-col-reverse cus-bg rounded-2xl p-5 justify-center md:flex-row lg:mx-16 2xl:px-40">
+<div class="event mt-10 flex flex-col-reverse cus-bg rounded-2xl p-5 justify-center md:flex-row lg:mx-16 2xl:px-40" id="Events">
     <div class="img3 mx-auto">
         <img class="w-96 xl:w-[450px]" src="/img/image event.png" alt="ice cream">
     </div>
@@ -288,7 +292,7 @@
 
 <!-- shop -->
 
-<div class="flavors mt-20">
+<div class="flavors mt-20" id="Shop">
     <div class="cat flex justify-between mx-8 items-center xl:mx-36">
       <h1 class="text-neutral-800 jul text-4xl ">Shop</h1>
       <div class="arrows flex gap-2">
@@ -310,7 +314,10 @@
             <h1 class="text-5xl text-neutral-400 mb-5">01</h1>
             <h3 class="font-bold text-2xl mb-3">Berrylicious Dream</h3>
             <p>Experience the burst of freshness with a medley of handpicked berries, perfectly churned into a velvety ice cream that's both fruity and luscious.</p>
-            <p class="text-xl text-neutral-400 my-4">15.99&#x20AC;</p>
+            <div class="cent flex justify-between items-center">
+                <p class="text-xl text-neutral-400 my-4">15.99&#x20AC;</p>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink thumbs-up-icon" onclick="toggleThumbsUp(this)"></i>
+            </div>
           </div>
           <div class="img4 w-80">
             <img src="img/image box1.png" alt="">
@@ -324,7 +331,10 @@
             <h1 class="text-5xl text-neutral-400 mb-5">02</h1>
             <h3 class="font-bold text-2xl mb-3">Vanilla Velvet Symphony</h3>
             <p>Indulge in the harmonious notes of classic vanilla, creating a velvety smooth symphony that satisfies your cravings with every spoonful.</p>
-            <p class="text-xl text-neutral-400 my-4">14.99&#x20AC;</p>
+            <div class="cent flex justify-between items-center">
+                <p class="text-xl text-neutral-400 my-4">14.99&#x20AC;</p>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink thumbs-up-icon" onclick="toggleThumbsUp(this)"></i>
+            </div>
           </div>
           <div class="img4 w-80">
             <img src="img/image box1.png" alt="">
@@ -338,7 +348,10 @@
             <h1 class="text-5xl text-neutral-400 mb-5">03</h1>
             <h3 class="font-bold text-2xl mb-3">Mango Tango Delight</h3>
             <p>A tropical delight that captures the essence of ripe mangoes, creating a refreshing and exotic treat that transports your taste buds to paradise.</p>
-            <p class="text-xl text-neutral-400 my-4">16.99&#x20AC;</p>
+            <div class="cent flex justify-between items-center">
+                <p class="text-xl text-neutral-400 my-4">16.99&#x20AC;</p>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink thumbs-up-icon" onclick="toggleThumbsUp(this)"></i>
+            </div>
           </div>
           <div class="img4 w-80">
             <img src="img/image box2.png" alt="">
@@ -352,7 +365,10 @@
             <h1 class="text-5xl text-neutral-400 mb-5">04</h1>
             <h3 class="font-bold text-2xl mb-3">Caramel Bliss Blast Dream</h3>
             <p>A heavenly blend of rich caramel swirls and crunchy toffee bits, creating a symphony of sweet indulgence in every bite.</p>
-            <p class="text-xl text-neutral-400 my-4">14.99&#x20AC;</p>
+            <div class="cent flex justify-between items-center">
+                <p class="text-xl text-neutral-400 my-4">14.99&#x20AC;</p>
+                <i class="fa-regular fa-thumbs-up text-2xl main-pink thumbs-up-icon" onclick="toggleThumbsUp(this)"></i>
+            </div>
           </div>
           <div class="img4 w-80">
             <img src="img/image box3.png" alt="">
