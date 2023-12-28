@@ -17,8 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollMonitor/1.2.0/scrollMonitor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+ 
+
+
 
 </head>
 <body>
@@ -49,13 +51,16 @@
                             <a href="index.html"><img src="/img/logo_ice.png" alt="logo"></a>
                         </div>
                     <a class="hidden xl:block" href="#Shop">Shop</a>
-                    <a class="hidden xl:block" href="#">Contact Us</a>
-                        <div class="link hidden xl:flex gap-5">
-                            <a href="#"><i class="fa-regular fa-thumbs-up"></i></a>
+                    <a class="hidden xl:block" href="#con">Contact Us</a>
+                        <div class="link hidden xl:flex gap-5 items-center">
+                            <div id="likeButton" class="like-section">
+                                <a href="#"><i class="fa-regular fa-thumbs-up"></i></a>
+                                <span class="like-count">0</span>
+                            </div>
                             <a href="#"><i class="fa-regular fa-user"></i></a>
                         </div>
 
-                        <!-- hidden meniu section-->
+                        <!-- hidden meniu -->
                         <div class="burger-meniu xl:hidden">
                             <i class="fa-solid fa-xmarks-lines cursor-pointer"></i>
                             <div class="mm invisible absolute z-30 pink left-0 p-8 h-screen w-full  -top-3">
@@ -64,7 +69,7 @@
                                     <a class="lily text-5xl"  href="#Reviews">Reviews</a>
                                     <a class="lily text-5xl text-center"  href="#Events">Events & Catering</a>
                                     <a class="lily text-5xl"  href="#Shop">Shop</a>
-                                    <a class="lily text-5xl"  href="#">Contact Us</a>
+                                    <a class="lily text-5xl"  href="#con">Contact Us</a>
                                         <div class="link flex justify-center text-2xl gap-9">
                                             <a href="#"><i class="fa-regular fa-thumbs-up"></i></a>
                                             <a href="#"><i class="fa-regular fa-user"></i></a>
@@ -86,14 +91,14 @@
 
     <!-- hero section -->
 
-<div class="hero-all mt-28 flex flex-col items-center mx-8 md:flex-row md:justify-center lg:mt-36 lg:gap-10 lg:align-middle lg:items-center xl:gap-24 ">
+<div class="hero-all mt-28 flex flex-col items-center mx-8 md:flex-row md:justify-center lg:mt-36 lg:gap-10 lg:align-middle lg:items-center xl:gap-24 2xl:pl-12">
 
             <img src="img/image 112.png" alt="ice cream" class="-rotate-12 hidden md:block md:w-[200px] md:relative z-20 md:-mt-8 lg:w-[220px] xl:w-[240px] 2xl:w-[300px] xl:mt-40px" id="image1">
 
         <div class="text-mid text-center flex flex-col justify-center items-center" id="textSection">
-                <h1 class="lily main-pink text-6xl md:text-8xl md:mb-6 lg:w-96 lg:text-9xl">Frozen Joy</h1>
-                <p class="my-3 w-80 relative z-20 lg:text-lg lg:mt-9 lg:w-[350px]">Savoring creamy delights under the summer sun, each spoonful brings pure happiness, a symphony of flavors dancing on the palate.</p>
-                <div class="buttons flex gap-7">
+                <h1 class="lily main-pink text-6xl md:text-8xl md:mb-6 lg:w-96 lg:text-9xl 2xl:text-[170px] 2xl:text-center 2xl:w-[500px]">Frozen Joy</h1>
+                <p class="my-3 w-80 relative z-20 lg:text-lg lg:mt-9 lg:w-[370px] 2xl:text-xl">Savoring creamy delights under the summer sun, each spoonful brings pure happiness, a symphony of flavors dancing on the palate.</p>
+                <div class="buttons flex gap-7 2xl:mt-5">
                     <button class="pink px-3 py-1 rounded-2xl text-white">Shop now</button>
                     <button class="beige px-3 py-1 rounded-2xl text-neutral-800">Read more</button>
                 </div>
@@ -116,10 +121,11 @@
             </div>
         </div>
     </div>
+</div>
 
     <!-- caurel -->
     <div class="flex justify-center" id="imageSlider">
-    <div class="all-carusel w-11/12 overflow-hidden inline-flex" id="imageSlider">
+    <div class="all-carusel w-11/12 overflow-hidden inline-flex" id="carouselContainer">
         <div class="ice bg-white">
             <div class="img1 w-64 xl:w-72">
                 <img src="/img/carus01.png" alt="ice cream">
@@ -213,7 +219,7 @@
 
 <!-- our Customer reviews -->
 
-<div class="bg w-full -z-20 absolute top-[1400px]">
+<div class="cust1 bg w-full -z-20 absolute top-[1400px]">
     <svg viewBox="0 0 1916 1543" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M-4 973.017C10.521 1018.61 23.7918 1063.94 34.6683 1108.32C123.977 1472.72 466.909 1495.44 958.477 1528.01L958.487 1528.01C1007.96 1531.28 1058.93 1534.66 1111.31 1538.5C1569.55 1572.06 1807.63 1409.8 1869.38 1324.48C1883.2 1307.91 1899.03 1288.52 1916 1267.23V258.35C1870.52 216.071 1816.71 174.215 1753.07 133.665C1390.35 -97.4772 693.072 22.8024 389.774 111.835C377.423 115.402 281.699 133.152 -2.38628 175.613C-2.92568 175.694 -3.46359 175.776 -4 175.858V973.017Z" fill="url(#paint0_linear_235_17)"/>
         <defs>
@@ -279,9 +285,9 @@
     <div class="img3 mx-auto">
         <img class="w-96 xl:w-[450px]" src="/img/image event.png" alt="ice cream">
     </div>
-    <div class="event-text mt-5 flex flex-col justify-center items-center xl:w-[500px]">
-        <h1 class="jul text-4xl uppercase mb-5 text-center">Events & Catering</h1>
-        <p class="text-center md:w-72">Scoopsy: Where Every Scoop Tells a Story! Indulge in a world of delightful flavors and creamy concoctions. Our ice cream creations are crafted to make every moment sweet and memorable. Scoop into happiness with Scoopsy!</p>
+    <div class="event-section event-text mt-5 flex flex-col justify-center items-center xl:w-[500px]">
+        <h1 class="txt1 jul text-4xl uppercase mb-5 text-center">Events & Catering</h1>
+        <p class="txt2 text-center md:w-72">Scoopsy: Where Every Scoop Tells a Story! Indulge in a world of delightful flavors and creamy concoctions. Our ice cream creations are crafted to make every moment sweet and memorable. Scoop into happiness with Scoopsy!</p>
         <div class="buttons my-4">
             <button class="beige px-3 py-1 rounded-2xl text-neutral-800">Read more</button>
         </div>
@@ -292,19 +298,13 @@
 
 <div class="flavors mt-20" id="Shop">
     <div class="cat flex justify-between mx-8 items-center xl:mx-36">
-      <h1 class="text-neutral-800 jul text-4xl ">Shop</h1>
-      <div class="arrows flex gap-2">
-        <div class="leftf cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full ">
-          <i class="fa-solid fa-chevron-left" onclick="prevImage1()"></i>
-        </div>
-        <div class="rightf cursor-pointer w-8 h-8 beige flex justify-center items-center rounded-full">
-          <i class="fa-solid fa-chevron-right" onclick="nextImage1()"></i>
-        </div>
-      </div>
+      <h1 class="text-neutral-800 jul text-5xl ">Shop</h1>
+
     </div>
+</div>
   
     <!-- shop carousel -->
-    <div class="all-carusel2 w-11/12 overflow-hidden flex mx-6" id="flavorSlider">
+    <div class="all-carusel2 flex flex-col items-center sm:flex-row sm:flex-wrap gap-10 sm:mx-7 sm:justify-center xl:gap-24 2xl:gap-36">
         
       <div class="ice2">
         <div class="mt-8 flex flex-col gap-3 w-64" >
@@ -317,13 +317,13 @@
                 <i class="fa-regular fa-thumbs-up text-2xl main-pink thumbs-up-icon" onclick="toggleThumbsUp(this)"></i>
             </div>
           </div>
-          <div class="img4 w-80">
+          <div class="img4 w-72">
             <img src="img/image box1.png" alt="">
           </div>
         </div>
       </div>
   
-      <div class="ice2">
+      <div class="ice3">
         <div class="mt-8 flex flex-col gap-3 w-64">
           <div class="txt">
             <h1 class="text-5xl text-neutral-400 mb-5">02</h1>
@@ -334,13 +334,13 @@
                 <i class="fa-regular fa-thumbs-up text-2xl main-pink thumbs-up-icon" onclick="toggleThumbsUp(this)"></i>
             </div>
           </div>
-          <div class="img4 w-80">
+          <div class="img4 w-72">
             <img src="img/image box1.png" alt="">
           </div>
         </div>
       </div>
   
-      <div class="ice2">
+      <div class="ice4">
         <div class="mt-8 flex flex-col gap-3 w-64">
           <div class="txt">
             <h1 class="text-5xl text-neutral-400 mb-5">03</h1>
@@ -351,13 +351,13 @@
                 <i class="fa-regular fa-thumbs-up text-2xl main-pink thumbs-up-icon" onclick="toggleThumbsUp(this)"></i>
             </div>
           </div>
-          <div class="img4 w-80">
+          <div class="img4 w-72">
             <img src="img/image box2.png" alt="">
           </div>
         </div>
       </div>
 
-      <div class="ice2">
+      <div class="ice5">
         <div class="mt-8 flex flex-col gap-3 w-64">
           <div class="txt">
             <h1 class="text-5xl text-neutral-400 mb-5">04</h1>
@@ -368,7 +368,7 @@
                 <i class="fa-regular fa-thumbs-up text-2xl main-pink thumbs-up-icon" onclick="toggleThumbsUp(this)"></i>
             </div>
           </div>
-          <div class="img4 w-80">
+          <div class="img4 w-72">
             <img src="img/image box3.png" alt="">
           </div>
         </div>
@@ -381,10 +381,10 @@
     <!-- subscribe -->
 
  <div class="sub my-20  flex flex-col items-center justify-center">
-    <h1 class="lily main-pink text-6xl md:text-8xl md:mb-6 lg:w-96 text-center">Subscribe to newsletter</h1>
-    <div class="mb-6 mx-14 flex flex-col items-center">
+    <h1 class="txt4 lily main-pink text-6xl md:text-8xl md:mb-6 lg:w-96 text-center">Subscribe to newsletter</h1>
+    <div class="email mb-6 mx-14 flex flex-col items-center">
         <label for="email" class="block mb-2 text-2xl font-medium text-gray-900 dark:text-white">Email address</label>
-        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 px-7 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@mail.com" required>
+        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 px-7 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Email" required>
     </div> 
     <div class="buttons flex gap-7">
         <button class="beige px-3 py-1 rounded-2xl text-neutral-800">Subscribe</button>
@@ -396,7 +396,7 @@
 <!-- footer -->
 
 
-<div class="fot flex flex-col items-center sm:flex-row sm:justify-center sm:gap-6 sm:scroll-pt-28 md:gap-10 lg:gap-20">
+<div id="con" class="fot flex flex-col items-center sm:flex-row sm:justify-center sm:gap-6 sm:scroll-pt-28 md:gap-10 lg:gap-20">
     <div class="logo w-36 mt-9 relative -z-20">
         <a href="index.html"><img src="/img/logo_ice.png" alt="logo"></a>
     </div>
@@ -408,7 +408,7 @@
 
     </div>
 
-    <div class="shop flex flex-col items-center gap-1 my-7">
+    <div class="shop1 flex flex-col items-center gap-1 my-7">
         <h3 class="jul text-2xl lg:text-3xl">Shop</h3>
         <a class="text-neutral-400" href="#">Our Flavors</a>
         <a class="text-neutral-400" href="#">Specials</a>
