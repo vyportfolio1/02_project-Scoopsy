@@ -1,3 +1,4 @@
+// slider
 const imageSlider = document.getElementById('imageSlider');
 const iceImages = imageSlider.querySelectorAll('.ice');
 let currentImageIndex = 0;
@@ -34,35 +35,7 @@ document.querySelector('.rightb').addEventListener('click', nextImage);
 
 showImage(currentImageIndex);
 
-
-const flavorSlider = document.getElementById('flavorSlider');
-const flavorImages = flavorSlider.querySelectorAll('.ice2');
-let currentFlavorIndex = 0;
-
-function showFlavor(index) {
-  flavorImages.forEach((image, i) => {
-    const width = image.offsetWidth;
-    const translateValue = (i - index) * (width * 0.5);  
-    image.style.transform = `translateX(calc(50% + ${translateValue}px))`;
-    image.style.transition = '1s ease';
-  });
-  currentFlavorIndex = index;
-}
-
-function nextFlavor() {
-  currentFlavorIndex = (currentFlavorIndex + 1) % flavorImages.length;
-  showFlavor(currentFlavorIndex);
-}
-
-function prevFlavor() {
-  currentFlavorIndex = (currentFlavorIndex - 1 + flavorImages.length) % flavorImages.length;
-  showFlavor(currentFlavorIndex);
-}
-
-document.querySelector('.leftf').addEventListener('click', prevFlavor);
-document.querySelector('.rightf').addEventListener('click', nextFlavor);
-
-showFlavor(currentFlavorIndex);
+//  mobile nav
 
 const meniuIcon = document.querySelector(".fa-xmarks-lines");
 const meniuClose = document.querySelector(".fa-circle-xmark");
@@ -76,11 +49,28 @@ meniuClose.addEventListener("click", () => {
   hiddenMeniu.classList.add("invisible");
 });
 
+// like uppdate
+let likeCount = 0;
+
 function toggleThumbsUp(icon) {
- 
-  icon.classList.toggle('fa-regular');
-  icon.classList.toggle('fa-solid');
+    
+    icon.classList.toggle('fa-regular');
+    icon.classList.toggle('fa-solid');
+
+    
+    likeCount += icon.classList.contains('fa-regular') ? -1 : 1;
+
+  
+    const likeButton = document.getElementById('likeButton');
+    const likeCountElement = document.querySelector('.like-count');
+
+    likeButton.classList.toggle('fa-regular', likeCount === 0);
+    likeButton.classList.toggle('fa-solid', likeCount > 0);
+
+    likeCountElement.textContent = likeCount;
 }
+
+// hero animation
 
 anime({
   targets: '#textSection',
@@ -122,142 +112,173 @@ anime({
   rotate: [0, 12], 
 });
 
-
-document.addEventListener('DOMContentLoaded', function () {
-  function animateReviews(entries, observer) {
-    const cus = document.querySelector('.cus');
-    const rev1 = document.querySelectorAll('.rev1');
-    const rev2 = document.querySelectorAll('.rev2');
-    const img2 = document.querySelector('.img2');
-
-    if (entries[0].isIntersecting) {
-      anime.set([cus, img2], { opacity: 0, translateY: 30 });
-      anime.set(rev1, { opacity: 0, translateY: 20 });
-
-      const revTimeline = anime.timeline({ easing: 'easeInOutQuad', duration: 1000 });
-      
-      revTimeline
-      .add({
-        targets: img2,
-        opacity: 1,
-        translateY: 0,
-        rotate: [0, -3]
-      })
-        .add({
-          targets: cus,
-          opacity: 1,
-          translateY: 0,
-        })
-        .add({
-          targets: rev1,
-          opacity: 1,
-          translateY: 0,
-          rotate: [0, 3]
-        })
-        .add({
-          targets: rev2,
-          opacity: 1,
-          translateY: 0,
-          rotate: [0, -4]
-        });
- 
-
-      observer.unobserve(entries[0].target);
+// <!-- our Customer reviews -->
+const reviewsObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateReviews();
+      observer.unobserve(entry.target);
     }
-  }
-
-  const observer = new IntersectionObserver(animateReviews, { threshold: 0.1 });
-  const container = document.querySelector('.all-cus');
-  observer.observe(container);
-});
-
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  function animateEvents(entries, observer) {
-      const eventSection = document.querySelector('.event');
-      const img3 = document.querySelector('.img3');
-      const eventText = document.querySelector('.event-text');
-
-      if (entries[0].isIntersecting) {
-          anime.set([eventText, img3], { opacity: 0, translateY: 50 });
-
-          anime.timeline({ easing: 'easeInOutQuad', duration: 1000 })
-              .add({
-                  targets: eventText,
-                  opacity: 1,
-                  translateY: 0,
-              })
-              .add({
-                  targets: img3,
-                  opacity: 1,
-                  translateY: 0,
-              });
-
-          observer.unobserve(entries[0].target);
-      }
-  }
-
-  const observer = new IntersectionObserver(animateEvents, { threshold: 0.2 });
-
-  const eventContainer = document.querySelector('.event');
-
-  observer.observe(eventContainer);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  function animateSubscription(entries, observer) {
-    const subscribeSection = document.querySelector('.sub');
-    const inputField = document.querySelector('#email');
-    const subscribeButton = document.querySelector('.sub button');
-
-    if (entries[0].isIntersecting) {
-      anime.set([subscribeSection, inputField, subscribeButton], { opacity: 0, translateY: 50 });
-
-      anime.timeline({ easing: 'easeInOutQuad', duration: 1000 })
-        .add({
-          targets: subscribeSection,
-          opacity: 1,
-          translateY: 0,
-        })
-        .add({
-          targets: [inputField, subscribeButton],
-          opacity: 1,
-          translateY: 0,
-        });
-
-      observer.unobserve(entries[0].target);
-    }
-  }
-
-  const observer = new IntersectionObserver(animateSubscription, { threshold: 0.1 });
-  const container = document.querySelector('.sub');
-  observer.observe(container);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const menuLinks = document.querySelectorAll('.meniu a');
-
-  menuLinks.forEach(link => {
-    link.addEventListener('click', smoothScroll);
   });
+}, { threshold: 0.5 });
 
-  function smoothScroll(e) {
-    e.preventDefault();
+const reviewsTargetElement = document.querySelector('.ice');
+reviewsObserver.observe(reviewsTargetElement);
 
-    const targetId = this.getAttribute('href').substring(1);
-    const targetElement = document.getElementById(targetId);
+function animateReviews() {
+  anime.timeline({
+    easing: 'easeInOutQuad',
+    duration: 1500,
+  })
+  .add({
+    targets: '.jul',
+    opacity: [0, 1],
+    translateY: [-50, 0],
+  })
+  .add({
+    targets: '.rev1',
+    opacity: [0, 1],
+    translateX: [-50, 0],
+    rotate: [0, 3],
+  }, '-=1000')
+  .add({
+    targets: '.rev2',
+    opacity: [0, 1],
+    translateX: [-10, 0],
+    rotate: [0, -3],
+  }, '-=1000')
+  .add({
+    targets: '.img2',
+    opacity: [0, 1],
+    translateX: [50, 0],
+    rotate: [0, -2],
+  }, '-=1000');
+}
 
-    if (targetElement) {
-      const offset = targetElement.offsetTop;
-
-      anime({
-        targets: document.documentElement,
-        scrollTop: offset,
-        duration: 1000,
-        easing: 'easeInOutQuad'
-      });
+//  "Events & Catering" section
+const eventsObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateEvents();
+      observer.unobserve(entry.target);
     }
-  }
-});
+  });
+}, { threshold: 0.1 });
+
+const eventsTargetElement = document.querySelector('.event');
+eventsObserver.observe(eventsTargetElement);
+
+function animateEvents() {
+  anime.timeline({
+    easing: 'easeInOutQuad',
+    duration: 1200,
+  })
+  .add({
+    targets: '.img3',
+    opacity: [0, 1],
+    translateX: [-100, 0],
+ 
+  })
+  .add({
+    targets: '.txt1',
+    opacity: [0, 1],
+    translateX: [100, 0],
+  }, '-=800')
+  .add({
+    targets: '.txt2',
+    opacity: [0, 1],
+    translateX: [80, 0],
+  }, '-=500')
+  .add({
+    targets: '.buttons',
+    opacity: [0, 1],
+    translateX: [50, 0],
+  }, '-=500');
+}
+
+// <!-- shop -->
+
+const shopObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateShop();
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+const shopTargetElement = document.querySelector('.all-carusel2');
+shopObserver.observe(shopTargetElement);   
+
+function animateShop() {
+  anime.timeline({
+    easing: 'easeInOutQuad',
+    duration: 1000,
+  })
+  .add({
+    targets: '.flavors',
+    opacity: [0, 1],
+    translateY: [-100, 0],
+  })
+  .add({
+    targets: '.ice2',
+    opacity: [0, 1],
+    translateY: [100, 0],
+  }, '-=800')
+  .add({
+    targets: '.ice3',
+    opacity: [0, 1],
+    translateY: [80, 0],
+  }, '-=500')
+  .add({
+    targets: '.ice4',
+    opacity: [0, 1],
+    translateY: [50, 0],
+  }, '-=500')
+  .add({
+    targets: '.ice5',
+    opacity: [0, 1],
+    translateY: [50, 0],
+  }, '-=500')
+  .add({
+    targets: '.img4',
+    opacity: [0, 1],
+    translateY: [50, 0],
+  }, '-=500');
+}
+
+// <!-- footer -->
+
+const footerObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateFooter();
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+const footerTargetElement = document.querySelector('.sub');
+footerObserver.observe(footerTargetElement);
+
+function animateFooter() {
+  anime.timeline({
+    easing: 'easeInOutQuad',
+    duration: 900,
+  })
+  .add({
+    targets: '.txt4',  
+    opacity: [0, 1],
+    translateY: [50, 0],
+  })
+  .add({
+    targets: '.email',  
+    opacity: [0, 1],
+    translateY: [50, 0],
+  })
+  .add({
+    targets: '.fot',  
+    opacity: [0, 1],
+    translateY: [50, 0],
+  });
+}
